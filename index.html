@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Benny's Artemis - Sito Ufficiale</title>
+    <title>Benny's x Artemis - Gestionale Automatico 2026</title>
     <style>
-        /* SFONDO CON LA TUA FOTO UFFICIALE (BENNY.jpg) */
+        /* BLOCCO SELEZIONE TESTO E COPIA RIGIDO */
         body {
             background-image: 
-                linear-gradient(rgba(10, 10, 10, 0.75), rgba(10, 10, 10, 0.88)), 
+                linear-gradient(rgba(10, 10, 10, 0.88), rgba(5, 5, 5, 0.95)), 
                 url('BENNY.jpg');
             background-size: cover;
             background-position: center;
@@ -16,68 +16,68 @@
             background-repeat: no-repeat;
             color: #ffffff;
             font-family: 'Segoe UI', Roboto, Arial, sans-serif;
-            padding: 40px 20px;
+            padding: 40px 20px 140px 20px;
             margin: 0;
+            
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            -webkit-user-drag: none;
+            cursor: default;
         }
 
-        /* CONTENITORE PRINCIPALE OFFICINA */
         .container {
             max-width: 850px;
             margin: 0 auto;
-            background-color: rgba(14, 14, 14, 0.94);
-            border: 2px solid #ff0000;
-            border-radius: 12px;
             padding: 35px;
-            box-shadow: 0 0 35px rgba(255, 0, 0, 0.3);
+            border: 3px solid transparent;
+            border-radius: 16px;
+            background-image: linear-gradient(rgba(12, 12, 12, 0.97), rgba(12, 12, 12, 0.97)), linear-gradient(135deg, #ff3333, #990000, #ff6666, #550000);
+            background-origin: border-box;
+            background-clip: padding-box, border-box;
+            background-size: 300% 300%;
+            animation: flussoBordo 6s linear infinite, containerGlow 4s linear infinite alternate;
         }
 
-        /* STRUTTURA DI PROSPETTIVA PER L'INSEGNA NEON */
+        @keyframes flussoBordo {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes containerGlow {
+            0% { box-shadow: 0 0 20px rgba(255, 51, 51, 0.15); }
+            100% { box-shadow: 0 0 35px rgba(255, 51, 51, 0.35); }
+        }
+
         header {
             text-align: center;
-            border-bottom: 3px solid #ff0000;
-            padding-bottom: 35px;
-            margin-bottom: 35px;
+            border-bottom: 2px solid #251212;
+            padding-bottom: 25px;
+            margin-bottom: 25px;
             perspective: 1000px; 
-        }
-
-        /* INSEGNA 3D PERFETTA: RUOTA SENZA RIGIRARSI AL CONTRARIO */
-        .insegna-contenitore {
-            display: inline-block;
-            animation: oscillazione3D 6s ease-in-out infinite alternate;
         }
 
         .testo-3d-definitivo {
             font-family: 'Arial Black', 'Impact', sans-serif;
-            font-size: 48px;
-            color: #ff0000;
+            font-size: 52px;
             text-transform: uppercase;
-            letter-spacing: 5px;
+            letter-spacing: 4px;
             margin: 0;
             font-weight: 900;
             display: inline-block;
-            
-            /* Animazione di rotazione controllata per non mostrare il retro vuoto */
-            animation: rotazioneFronteRetro 7s linear infinite;
-            
-            /* 12 STRATI DI ESTRUSIONE PER UN EFFETTO BLOCCO MASSICCIO E ULTRA-DOPPIO */
-            text-shadow: 
-                0 1px 0 #cc0000, 0 2px 0 #b30000, 0 3px 0 #a30000, 0 4px 0 #990000,
-                0 5px 0 #880000, 0 6px 0 #770000, 0 7px 0 #660000, 0 8px 0 #550000,
-                0 9px 0 #440000, 0 10px 0 #330000, 0 11px 0 #220000, 0 12px 1px rgba(0,0,0,0.7),
-                0 0 20px rgba(255, 0, 0, 0.6), 0 10px 25px rgba(0, 0, 0, 0.5);
+            animation: rotazioneFronteRetro 6s linear infinite;
         }
 
-        /* Animazione accattivante che fa girare il testo mantenendo la tridimensionalità leggibile */
+        .brand-bennys { color: #ff3333; text-shadow: 0 0 20px rgba(255, 51, 51, 0.7); }
+        .brand-x { color: #ffffff; font-size: 42px; text-shadow: 0 0 15px rgba(255,255,255,0.6); margin: 0 10px; }
+        .brand-artemis { color: #22c55e; text-shadow: 0 0 20px rgba(34, 197, 94, 0.7); }
+
         @keyframes rotazioneFronteRetro {
-            0% {
-                transform: rotateY(-45deg) rotateX(10deg);
-            }
-            50% {
-                transform: rotateY(45deg) rotateX(-10deg);
-            }
-            100% {
-                transform: rotateY(-45deg) rotateX(10deg);
-            }
+            0% { transform: rotateY(-20deg) rotateX(5deg); }
+            50% { transform: rotateY(20deg) rotateX(-5deg); }
+            100% { transform: rotateY(-20deg) rotateX(5deg); }
         }
 
         header p {
@@ -85,16 +85,77 @@
             font-size: 14px;
             text-transform: uppercase;
             letter-spacing: 3px;
-            margin: 25px 0 0 0;
+            margin: 15px 0 0 0;
         }
 
-        /* STRUTTURA CATEGORIE E LISTINO PREZZI */
+        /* 📊 BLOCCO FINANZE IN ALTO */
+        .sezione-superiore-finanze {
+            background-color: rgba(18, 12, 12, 0.85);
+            border: 2px solid #2b1515;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .sezione-superiore-finanze h3 {
+            color: #22c55e;
+            margin-top: 0;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            font-size: 16px;
+            letter-spacing: 1px;
+            border-bottom: 1px solid #251212;
+            padding-bottom: 8px;
+        }
+
+        .griglia-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 15px;
+        }
+
+        @media (max-width: 750px) {
+            .griglia-form { grid-template-columns: 1fr; }
+        }
+
+        .campo-form {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .campo-form label {
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #ff4444;
+        }
+
+        .campo-form input, .campo-form select {
+            background-color: rgba(10, 5, 5, 0.9);
+            border: 2px solid #ff3333;
+            border-radius: 6px;
+            color: #ffffff;
+            padding: 10px;
+            font-size: 14px;
+            outline: none;
+            transition: all 0.2s;
+        }
+
+        .campo-form input:focus, .campo-form select:focus {
+            border-color: #22c55e;
+            box-shadow: 0 0 10px rgba(34, 197, 94, 0.4);
+        }
+
+        /* STRUTTURA LISTINO */
         .categoria-titolo {
             font-size: 22px;
             color: #ffffff;
-            border-left: 5px solid #ff0000;
+            border-left: 5px solid #ff3333;
             padding-left: 12px;
-            margin-top: 40px;
+            margin-top: 35px;
             margin-bottom: 15px;
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -103,90 +164,228 @@
         .lista-interventi {
             list-style: none;
             padding: 0;
-            margin: 0 0 15px 0;
+            margin: 0 0 12px 0;
         }
 
         .lista-interventi li {
-            background-color: rgba(22, 22, 22, 0.95);
-            border: 1px solid #333333;
+            background-color: rgba(20, 20, 20, 0.75);
+            border: 1px solid #2b1515;
             border-radius: 6px;
             padding: 16px 20px;
             margin-bottom: 8px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            transition: all 0.25s ease-in-out;
         }
-
+        
         .lista-interventi li:hover {
-            border: 1px solid #ff0000;
+            background-color: rgba(30, 20, 20, 0.9);
+            border-color: #551a1a;
+            transform: translateX(5px);
         }
 
-        .intervento-nome {
-            font-weight: 600;
+        .lista-interventi li.riga-attiva {
+            border-color: #22c55e !important;
+            box-shadow: 0 0 15px rgba(34, 197, 94, 0.25) !important;
+            background-color: rgba(22, 38, 26, 0.85) !important;
+        }
+
+        .lista-interventi li.lampeggio-sempre-base {
+            animation: continuoLampeggioRosso 2s ease-in-out infinite;
+        }
+
+        @keyframes continuoLampeggioRosso {
+            0%, 100% { border-color: #2b1515; box-shadow: none; background-color: rgba(20, 20, 20, 0.75); }
+            50% { border-color: #ff3333; box-shadow: 0 0 15px rgba(255, 51, 51, 0.3); background-color: rgba(40, 15, 15, 0.85); }
+        }
+
+        .intervento-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            width: 70%;
+        }
+
+        .lista-checkbox {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 22px;
+            height: 22px;
+            border: 2px solid #ff3333;
+            border-radius: 5px;
+            background-color: rgba(10, 5, 5, 0.8);
+            cursor: pointer;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+            flex-shrink: 0;
+        }
+
+        .lista-checkbox:checked {
+            border-color: #22c55e;
+            background-color: rgba(34, 197, 94, 0.2);
+            box-shadow: 0 0 10px rgba(34, 197, 94, 0.6);
+        }
+
+        .lista-checkbox:checked::after {
+            content: '✓';
+            color: #22c55e;
+            font-size: 16px;
+            font-weight: 900;
+        }
+
+        .input-quantita {
+            width: 50px;
+            background-color: rgba(10, 5, 5, 0.9);
+            border: 2px solid #ff3333;
+            border-radius: 5px;
             color: #ffffff;
-        }
-
-        .intervento-prezzo {
-            color: #ff0000;
+            padding: 4px;
+            font-size: 15px;
             font-weight: bold;
-            font-size: 20px;
+            text-align: center;
+            outline: none;
         }
 
-        /* SCATOLE SUBTOTALI */
+        .intervento-nome { font-weight: 500; color: #eeeeee; }
+        .intervento-prezzo { color: #ffffff; font-weight: bold; font-size: 19px; text-align: right; width: 30%; }
+
+        .btn-link-interno {
+            background-color: rgba(255, 51, 51, 0.15);
+            color: #ff3333;
+            border: 1px solid #ff3333;
+            border-radius: 4px;
+            padding: 4px 10px;
+            font-size: 11px;
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+            margin-left: 10px;
+            display: inline-block;
+            vertical-align: middle;
+            transition: all 0.2s ease;
+        }
+
+        .btn-link-interno:hover {
+            background-color: #ff3333;
+            color: #ffffff;
+            box-shadow: 0 0 8px rgba(255, 51, 51, 0.5);
+        }
+
         .subtotale-box {
-            background-color: rgba(255, 0, 0, 0.12);
-            border: 1px solid #ff0000;
+            background-color: rgba(255, 51, 51, 0.04);
+            border: 1px solid rgba(255, 51, 51, 0.3);
             border-radius: 6px;
             padding: 12px 20px;
             text-align: right;
             font-weight: bold;
-            color: #ff0000;
+            color: #ff4444;
             text-transform: uppercase;
             letter-spacing: 1px;
             margin-bottom: 35px;
         }
 
-        /* REGOLAMENTO ESTETICA */
+        /* BARRE STRUMENTI IN BASSO */
+        .barra-totale-preventivo {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(12, 12, 12, 0.97);
+            border-top: 3px solid #22c55e;
+            box-shadow: 0 -10px 30px rgba(34, 197, 94, 0.25);
+            padding: 15px 0;
+            z-index: 9999;
+        }
+
+        .contenuto-totale {
+            max-width: 850px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .riquadri-espositivi-bar {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
+
+        .blocco-valore-bar {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .titolo-valore-bar {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #aaaaaa;
+            margin-bottom: 2px;
+        }
+
+        .valore-cifra-bar {
+            font-size: 22px;
+            font-family: 'Arial Black', sans-serif;
+            font-weight: bold;
+        }
+        .v-totale { color: #ffffff; text-shadow: 0 0 10px rgba(255,255,255,0.2); }
+        .v-dipendente { color: #38bdf8; }
+        .v-azienda { color: #eab308; }
+
+        .gruppo-pulsanti {
+            display: flex;
+            gap: 12px;
+        }
+
+        .btn-discord {
+            color: #ffffff;
+            border: none;
+            border-radius: 12px;
+            padding: 14px 28px;
+            font-size: 14px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .btn-generico-lavoro {
+            background: linear-gradient(135deg, #22c55e, #16a34a);
+            box-shadow: 0 0 15px rgba(34, 197, 94, 0.4);
+        }
+        .btn-generico-lavoro:hover {
+            background: linear-gradient(135deg, #16a34a, #15803d);
+            transform: scale(1.05);
+            box-shadow: 0 0 25px rgba(34, 197, 94, 0.7);
+        }
+
         .regolamento-box {
-            background-color: rgba(30, 10, 10, 0.9);
-            border: 2px solid #ff0000;
+            background-color: rgba(18, 12, 12, 0.95);
+            border: 1px solid #442222;
+            border-left: 4px solid #ff3333;
             border-radius: 8px;
             padding: 22px;
             margin: 30px 0;
         }
-
-        .regolamento-box h3 {
-            color: #ff3333;
-            margin-top: 0;
-            margin-bottom: 12px;
-            text-transform: uppercase;
-            font-size: 18px;
-        }
-
+        .regolamento-box h3 { color: #ff3333; margin-top: 0; margin-bottom: 12px; text-transform: uppercase; font-size: 18px; }
         .regolamento-box p { margin: 0 0 12px 0; color: #ffffff; font-size: 15px; }
         .regolamento-box ul { margin: 0; padding-left: 20px; color: #dddddd; font-size: 14px; }
         .regolamento-box li { margin-bottom: 6px; }
-
-        /* AVVISO MECCANICI */
-        .avviso-box {
-            background-color: rgba(20, 5, 5, 0.95);
-            border: 1px dashed #ff0000;
-            border-radius: 6px;
-            padding: 18px;
-            margin-top: 15px;
-            margin-bottom: 35px;
-        }
-        
-        .avviso-box strong { color: #ff3333; text-transform: uppercase; display: block; margin-bottom: 6px; }
-        .avviso-box p { margin: 0; font-size: 14px; color: #dddddd; }
 
         footer {
             text-align: center;
             margin-top: 60px;
             padding-top: 25px;
-            border-top: 1px solid #333333;
+            border-top: 1px solid #251515;
             font-size: 13px;
-            color: #888888;
+            color: #777777;
             text-transform: uppercase;
         }
     </style>
@@ -197,105 +396,485 @@
 
     <header>
         <div class="insegna-contenitore">
-            <div class="testo-3d-definitivo">Benny's Artemis</div>
+            <div class="testo-3d-definitivo">
+                <span class="brand-bennys">Benny's</span><span class="brand-x">X</span><span class="brand-artemis">Artemis</span>
+            </div>
         </div>
-        <p>Officina Meccanica & Centro Estetico Ufficiale</p>
+        <p>Sistema Gestionale Unificato Interno • 2026</p>
     </header>
 
-    <div class="categoria-titolo">🛠️ [01] Ripristino e Cura del Veicolo</div>
-    <ul class="lista-interventi">
-        <li><span class="intervento-nome">Riparazioni Meccaniche 🔧</span><span class="intervento-prezzo">2.500$</span></li>
-        <li><span class="intervento-nome">Pulizia Dettagliata 🧼</span><span class="intervento-prezzo">1.000$</span></li>
-    </ul>
-    <div class="subtotale-box">Subtotale Ripristino: 3.500$</div>
+    <div class="sezione-superiore-finanze">
+        <h3>💼 Configurazione Personale Meccanico (Dati Invio)</h3>
+        <div class="griglia-form">
+            <div class="campo-form">
+                <label>👤 Nome e Cognome Meccanico (IC)</label>
+                <input type="text" id="finNomeIC" placeholder="Es. PASCAL ZAPPATOR">
+            </div>
+            <div class="campo-form">
+                <label>🆔 Il tuo Discord ID (Solo Numeri)</label>
+                <input type="text" id="finDiscordID" placeholder="Es. 1035308087684374608">
+            </div>
+            <div class="campo-form">
+                <label>📋 Grado Aziendale (% Guadagno)</label>
+                <select id="finGrado" onchange="aggiornaTotale()">
+                    <option value="" disabled selected>Seleziona il tuo grado...</option>
+                    <option value="0.35">Direttore (35%)</option>
+                    <option value="0.30">Vice Direttore (30%)</option>
+                    <option value="0.23">Responsabile Officina (23%)</option>
+                    <option value="0.20">Supervisore (20%)</option>
+                    <option value="0.15">Meccanico Esperto (15%)</option>
+                    <option value="0.10">Meccanico (10%)</option>
+                    <option value="0.07">Meccanico in Prova (7%)</option>
+                    <option value="0.05">Apprendista (5%)</option>
+                </select>
+            </div>
+        </div>
+    </div>
 
-    <div class="categoria-titolo">🎨 [02] Categoria: Estetica</div>
-    <ul class="lista-interventi">
-        <li><span class="intervento-nome">Verniciatura Completa 🎨</span><span class="intervento-prezzo">1.000$</span></li>
-        <li><span class="intervento-nome">Componenti Estetiche Varie (Neon, Luci, Cerchi, ecc.) ⚙️</span><span class="intervento-prezzo">Prezzo Variabile</span></li>
-    </ul>
-    <div class="subtotale-box">Subtotale Estetica Base: 1.000$</div>
-
-    <div class="regolamento-box">
-        <h3>📝 Regolamento Interno Estetica (Prezzi Variabili)</h3>
-        <p>Si applica rigidamente la formula ufficiale aziendale:</p>
-        <p style="font-size: 22px; color: #ff0000; font-weight: bold; text-align: center; margin: 15px 0;">
-            ➡️ PREZZO DI LISTINO + 200$ (Maggiorazione Fissa)
-        </p>
-        <ul>
-            <li><strong>Esempio:</strong> Pezzo da 20$ ➜ 20$ + 200$ = 220$ finali.</li>
-            <li><strong>Arrotondamento:</strong> Cifre con spiccioli vengono arrotondate alla cifra tonda più vicina.</li>
+    <div id="sezione-listino">
+        <div class="categoria-titolo">🛠️ [01] Ripristino e Cura del Veicolo</div>
+        <ul class="lista-interventi">
+            <li>
+                <div class="intervento-info">
+                    <input type="checkbox" class="lista-checkbox" data-prezzo="2000" data-nome="Riparazioni Meccaniche">
+                    <span class="intervento-nome">Riparazioni Meccaniche 🔧</span>
+                </div>
+                <span class="intervento-prezzo">2.000$</span>
+            </li>
+            <li>
+                <div class="intervento-info">
+                    <input type="checkbox" class="lista-checkbox" data-prezzo="1000" data-nome="Pulizia Dettagliata">
+                    <span class="intervento-nome">Pulizia Dettagliata 🧼</span>
+                </div>
+                <span class="intervento-prezzo">1.000$</span>
+            </li>
         </ul>
+        <div class="subtotale-box">Subtotale Ripristino: 3.000$</div>
+
+        <div class="categoria-titolo">🎨 [02] Categoria: Estetica</div>
+        <ul class="lista-interventi">
+            <li>
+                <div class="intervento-info">
+                    <input type="checkbox" class="lista-checkbox" data-prezzo="1000" data-nome="Verniciatura Completa">
+                    <span class="intervento-nome">Verniciatura Completa 🎨</span>
+                </div>
+                <span class="intervento-prezzo">1.000$</span>
+            </li>
+            <li id="sezione-componenti-estetiche" class="lampeggio-sempre-base">
+                <div class="intervento-info">
+                    <input type="number" class="input-quantita" id="quantitaEstetica" min="0" max="50" value="0" data-prezzo-unitario="1000" data-nome="Componenti Estetiche">
+                    <span class="intervento-nome">Componenti Estetiche (Neon, Cerchi, Spoiler, ecc.) ⚙️</span>
+                </div>
+                <span class="intervento-prezzo">1.000$ <span style="font-size:12px; color:#aaa; font-weight:normal;">A PEZZO</span></span>
+            </li>
+            <li>
+                <div class="intervento-info">
+                    <input type="checkbox" class="lista-checkbox" data-prezzo="3500" data-nome="Applicazione Livrea">
+                    <span class="intervento-nome">Applicazione Livrea 🏎️✨</span>
+                </div>
+                <span class="intervento-prezzo">3.500$</span>
+            </li>
+        </ul>
+        
+        <div class="regolamento-box">
+            <h3>📝 Regolamento Interno Staff (Gestione Estetica)</h3>
+            <p>Linee guidelines tassative per i meccanici durante il calcolo del preventivo:</p>
+            <ul>
+                <li><strong>Componenti Singole:</strong> Impostare nel quadratino il numero esatto di modifiche installate. Vengono calcolati in automatico 1.000$ a pezzo (Max 50).</li>
+            </ul>
+        </div>
+
+        <div class="categoria-titolo">📦 [03] Categoria: Kit completo</div>
+        <ul class="lista-interventi">
+            <li>
+                <div class="intervento-info">
+                    <input type="checkbox" class="lista-checkbox" data-prezzo="18000" data-nome="Full Kit Meccanica Standard">
+                    <div>
+                        <span class="intervento-nome" style="display: block;">Full Kit Meccanica Standard 📦👑</span>
+                        <span style="font-size: 12px; color: #aaaaaa;">(Meccanica fissa al massimo livello: 18.000$)</span>
+                    </div>
+                </div>
+                <span class="intervento-prezzo">18.000$</span>
+            </li>
+            <li>
+                <div class="intervento-info" style="padding-left: 37px;">
+                    <div>
+                        <span class="intervento-nome" style="display: inline-block;">Full Kit Estetica 🖥️📊</span>
+                        <button type="button" class="btn-link-interno" onclick="vaiAComponentiEstetiche()">Vai a Componenti ➡️</button>
+                        <span style="font-size: 12px; color: #aaaaaa; display: block; margin-top: 2px;">(In base al numero di modifiche installate nella sezione estetica)</span>
+                    </div>
+                </div>
+                <span class="intervento-prezzo" style="color:#22c55e;">Prezzo Variabile</span>
+            </li>
+        </ul>
+        <div class="subtotale-box">Subtotale Full Kit Meccanica: 18.000$</div>
+
+        <div class="categoria-titolo">🚀 [04] Elaborazione Prestazioni (Motore & Turbo)</div>
+        <ul class="lista-interventi">
+            <li>
+                <div class="intervento-info">
+                    <input type="checkbox" class="lista-checkbox" data-prezzo="1000" data-nome="Modifica Turbo">
+                    <span>Modifica Turbo 🏎️💨</span>
+                </div>
+                <span class="intervento-prezzo">1.000$</span>
+            </li>
+            <li>
+                <div class="intervento-info">
+                    <input type="checkbox" class="lista-checkbox" data-prezzo="1400" data-nome="Upgrade Motore Lvl 1">
+                    <span>Upgrade Motore LIVELLO 1 🚀</span>
+                </div>
+                <span class="intervento-prezzo">1.400$</span>
+            </li>
+            <li>
+                <div class="intervento-info">
+                    <input type="checkbox" class="lista-checkbox" data-prezzo="1800" data-nome="Upgrade Motore Lvl 2">
+                    <span>Upgrade Motore LIVELLO 2 🚀🔥</span>
+                </div>
+                <span class="intervento-prezzo">1.800$</span>
+            </li>
+            <li>
+                <div class="intervento-info">
+                    <input type="checkbox" class="lista-checkbox" data-prezzo="2570" data-nome="Upgrade Motore Lvl 3">
+                    <span>Upgrade Motore LIVELLO 3 🚀⚡</span>
+                </div>
+                <span class="intervento-prezzo">2.570$</span>
+            </li>
+            <li>
+                <div class="intervento-info">
+                    <input type="checkbox" class="lista-checkbox" data-prezzo="4400" data-nome="Upgrade Motore Lvl 4">
+                    <span>Upgrade Motore LIVELLO 4 🚀👑</span>
+                </div>
+                <span class="intervento-prezzo">4.400$</span>
+            </li>
+        </ul>
+        <div class="subtotale-box">Subtotale Potenza: 11.170$</div>
+
+        <div class="categoria-titolo">🛑 [05] Sicurezza e Controllo (Freni)</div>
+        <ul class="lista-interventi">
+            <li>
+                <div class="intervento-info">
+                    <input type="checkbox" class="lista-checkbox" data-prezzo="1200" data-nome="Upgrade Freni Lvl 1">
+                    <span>Upgrade Freni LIVELLO 1 🛑</span>
+                </div>
+                <span class="intervento-prezzo">1.200$</span>
+            </li>
+            <li>
+                <div class="intervento-info">
+                    <input type="checkbox" class="lista-checkbox" data-prezzo="1300" data-nome="Upgrade Freni Lvl 2">
+                    <span>Upgrade Freni LIVELLO 2 🛑🔥</span>
+                </div>
+                <span class="intervento-prezzo">1.300$</span>
+            </li>
+            <li>
+                <div class="intervento-info">
+                    <input type="checkbox" class="lista-checkbox" data-prezzo="1400" data-nome="Upgrade Freni Lvl 3">
+                    <span>Upgrade Freni LIVELLO 3 🛑⚡</span>
+                </div>
+                <span class="intervento-prezzo">1.400$</span>
+            </li>
+            <li>
+                <div class="intervento-info">
+                    <input type="checkbox" class="lista-checkbox" data-prezzo="1600" data-nome="Upgrade Freni Lvl 4">
+                    <span>Upgrade Freni LIVELLO 4 🛑👑</span>
+                </div>
+                <span class="intervento-prezzo">1.600$</span>
+            </li>
+        </ul>
+        <div class="subtotale-box">Subtotale Freni: 5.500$</div>
+
+        <div class="categoria-titolo">⚙️ [06] Trasmissioni</div>
+        <ul class="lista-interventi">
+            <li>
+                <div class="intervento-info">
+                    <input type="checkbox" class="lista-checkbox" data-prezzo="1400" data-nome="Upgrade Trasmissione Lvl 1">
+                    <span>Upgrade Trasmissione LIVELLO 1 ⚙️</span>
+                </div>
+                <span class="intervento-prezzo">1.400$</span>
+            </li>
+            <li>
+                <div class="intervento-info">
+                    <input type="checkbox" class="lista-checkbox" data-prezzo="1550" data-nome="Upgrade Trasmissione Lvl 2">
+                    <span>Upgrade Trasmissione LIVELLO 2 ⚙️🔥</span>
+                </div>
+                <span class="intervento-prezzo">1.550$</span>
+            </li>
+            <li>
+                <div class="intervento-info">
+                    <input type="checkbox" class="lista-checkbox" data-prezzo="2000" data-nome="Upgrade Trasmissione Lvl 3">
+                    <span>Upgrade Trasmissione LIVELLO 3 ⚙️⚡</span>
+                </div>
+                <span class="intervento-prezzo">2.000$</span>
+            </li>
+            <li>
+                <div class="intervento-info">
+                    <input type="checkbox" class="lista-checkbox" data-prezzo="2200" data-nome="Upgrade Trasmissione Lvl 4">
+                    <span>Upgrade Trasmissione LIVELLO 4 ⚙️👑</span>
+                </div>
+                <span class="intervento-prezzo">2.200$</span>
+            </li>
+        </ul>
+        <div class="subtotale-box">Subtotale Trasmissioni: 7.150$</div>
+
+        <div class="categoria-titolo">🛑 [07] Sicurezza e Controllo (Sospensioni)</div>
+        <ul class="lista-interventi">
+            <li>
+                <div class="intervento-info">
+                    <input type="checkbox" class="lista-checkbox" data-prezzo="1100" data-nome="Upgrade Sospensioni Lvl 1">
+                    <span>Upgrade Sospensioni LIVELLO 1 🛑</span>
+                </div>
+                <span class="intervento-prezzo">1.100$</span>
+            </li>
+            <li>
+                <div class="intervento-info">
+                    <input type="checkbox" class="lista-checkbox" data-prezzo="1300" data-nome="Upgrade Sospensioni Lvl 2">
+                    <span>Upgrade Sospensioni LIVELLO 2 🛑🔥</span>
+                </div>
+                <span class="intervento-prezzo">1.300$</span>
+            </li>
+            <li>
+                <div class="intervento-info">
+                    <input type="checkbox" class="lista-checkbox" data-prezzo="1550" data-nome="Upgrade Sospensioni Lvl 3">
+                    <span>Upgrade Sospensioni LIVELLO 3 🛑⚡</span>
+                </div>
+                <span class="intervento-prezzo">1.550$</span>
+            </li>
+            <li>
+                <div class="intervento-info">
+                    <input type="checkbox" class="lista-checkbox" data-prezzo="1900" data-nome="Upgrade Sospensioni Lvl 4">
+                    <span>Upgrade Sospensioni LIVELLO 4 🛑👑</span>
+                </div>
+                <span class="intervento-prezzo">1.900$</span>
+            </li>
+        </ul>
+        <div class="subtotale-box">Subtotale Sospensioni: 5.850$</div>
+
+        <div class="categoria-titolo">🛡️ [08] Corazze (Blindatura)</div>
+        <ul class="lista-interventi">
+            <li>
+                <div class="intervento-info">
+                    <input type="checkbox" class="lista-checkbox" data-prezzo="2000" data-nome="Upgrade Corazza Lvl 1">
+                    <span>Upgrade Corazza LIVELLO 1 🛡️</span>
+                </div>
+                <span class="intervento-prezzo">2.000$</span>
+            </li>
+            <li>
+                <div class="intervento-info">
+                    <input type="checkbox" class="lista-checkbox" data-prezzo="3000" data-nome="Upgrade Corazza Lvl 2">
+                    <span>Upgrade Corazza LIVELLO 2 🛡️🔥</span>
+                </div>
+                <span class="intervento-prezzo">3.000$</span>
+            </li>
+            <li>
+                <div class="intervento-info">
+                    <input type="checkbox" class="lista-checkbox" data-prezzo="3500" data-nome="Upgrade Corazza Lvl 3">
+                    <span>Upgrade Corazza LIVELLO 3 🛡️⚡</span>
+                </div>
+                <span class="intervento-prezzo">3.500$</span>
+            </li>
+            <li>
+                <div class="intervento-info">
+                    <input type="checkbox" class="lista-checkbox" data-prezzo="4100" data-nome="Upgrade Corazza Lvl 4">
+                    <span>Upgrade Corazza LIVELLO 4 🛡️👑</span>
+                </div>
+                <span class="intervento-prezzo">4.100$</span>
+            </li>
+            <li>
+                <div class="intervento-info">
+                    <input type="checkbox" class="lista-checkbox" data-prezzo="4500" data-nome="Upgrade Corazza Lvl 5">
+                    <span>Upgrade Corazza LIVELLO 5 🛡️💎</span>
+                </div>
+                <span class="intervento-prezzo">4.500$</span>
+            </li>
+        </ul>
+        <div class="subtotale-box">Subtotale Corazze: 17.100$</div>
     </div>
-
-    <div class="categoria-titolo">📦 [03] Categoria: Full Kit</div>
-    <ul class="lista-interventi">
-        <li>
-            <div>
-                <span class="intervento-nome" style="display: block;">Meccanica Massima LV 4 📦👑</span>
-                <span style="font-size: 13px; color: #aaaaaa;">(Include il livello 4 di tutti i componenti meccanici)</span>
-            </div>
-            <span class="intervento-prezzo">13.000$</span>
-        </li>
-        <li>
-            <div>
-                <span class="intervento-nome" style="display: block;">Full Kit Estetica 🖥️📊</span>
-                <span style="font-size: 13px; color: #aaaaaa;">(Calcolato tramite calcolatrice aziendale)</span>
-            </div>
-            <span class="intervento-prezzo">[Calcolo da PC]</span>
-        </li>
-    </ul>
-    <div class="subtotale-box">Subtotale Full Kit Meccanica: 13.000$</div>
-
-    <div class="avviso-box">
-        <strong>⚠️ Avviso Importante per lo Staff:</strong>
-        <p>Il pacchetto FULL KIT MECCANICA non comprende l'estetica. Sono due elementi gestiti separatamente.</p>
-    </div>
-
-    <div class="categoria-titolo">🚀 [04] Elaborazione Prestazioni (Motore & Turbo)</div>
-    <ul class="lista-interventi">
-        <li><span>Modifica Turbo 🏎️💨</span><span class="intervento-prezzo">800$</span></li>
-        <li><span>Upgrade Motore LIVELLO 1 ⚙️</span><span class="intervento-prezzo">550$</span></li>
-        <li><span>Upgrade Motore LIVELLO 2 ⚙️🔥</span><span class="intervento-prezzo">1.000$</span></li>
-        <li><span>Upgrade Motore LIVELLO 3 ⚙️⚡</span><span class="intervento-prezzo">1.765$</span></li>
-        <li><span>Upgrade Motore LIVELLO 4 ⚙️👑</span><span class="intervento-prezzo">3.550$</span></li>
-    </ul>
-    <div class="subtotale-box">Subtotale Potenza: 7.665$</div>
-
-    <div class="categoria-titolo">⚙️ [05] Trasmissioni</div>
-    <ul class="lista-interventi">
-        <li><span>Upgrade Trasmissione LIVELLO 1 📦</span><span class="intervento-prezzo">525$</span></li>
-        <li><span>Upgrade Trasmissione LIVELLO 2 📦🔥</span><span class="intervento-prezzo">710$</span></li>
-        <li><span>Upgrade Trasmissione LIVELLO 3 📦⚡</span><span class="intervento-prezzo">1.320$</span></li>
-        <li><span>Upgrade Trasmissione LIVELLO 4 📦👑</span><span class="intervento-prezzo">1.400$</span></li>
-    </ul>
-    <div class="subtotale-box">Subtotale Trasmissioni: 3.955$</div>
-
-    <div class="categoria-titolo">🛡️ [06] Corazze (Blindatura)</div>
-    <ul class="lista-interventi">
-        <li><span>Upgrade Corazza LIVELLO 1 🛡️</span><span class="intervento-prezzo">1.170$</span></li>
-        <li><span>Upgrade Corazza LIVELLO 2 🛡️🔥</span><span class="intervento-prezzo">2.080$</span></li>
-        <li><span>Upgrade Corazza LIVELLO 3 🛡️⚡</span><span class="intervento-prezzo">2.600$</span></li>
-        <li><span>Upgrade Corazza LIVELLO 4 🛡️👑</span><span class="intervento-prezzo">3.320$</span></li>
-        <li><span>Upgrade Corazza LIVELLO 5 🛡️💎</span><span class="intervento-prezzo">3.800$</span></li>
-    </ul>
-    <div class="subtotale-box">Subtotale Corazze: 12.970$</div>
-
-    <div class="categoria-titolo">🛑 [07] Sicurezza e Controllo (Freni)</div>
-    <ul class="lista-interventi">
-        <li><span>Upgrade Freni LIVELLO 1 🛑</span><span class="intervento-prezzo">300$</span></li>
-        <li><span>Upgrade Freni LIVELLO 2 🛑🔥</span><span class="intervento-prezzo">425$</span></li>
-        <li><span>Upgrade Freni LIVELLO 3 🛑⚡</span><span class="intervento-prezzo">650$</span></li>
-        <li><span>Upgrade Freni LIVELLO 4 🛑👑</span><span class="intervento-prezzo">770$</span></li>
-    </ul>
-    <div class="subtotale-box">Subtotale Freni: 2.145$</div>
 
     <footer>
-        <p style="color: #ff0000; font-weight: bold; font-size: 16px; margin-bottom: 5px;">Benny's Artemis © 2026</p>
-        <p>Listino Ufficiale Aziendale • Buon RP!</p>
+        <p style="color: #ff3333; font-weight: bold; font-size: 16px; margin-bottom: 5px;">🔴 Benny's x <span style="color: #22c55e;">Artemis</span> 🖤</p>
+        <p>Listino Automatico Unificato • 2026</p>
     </footer>
 
 </div>
+
+<div class="barra-totale-preventivo">
+    <div class="contenuto-totale">
+        <div class="riquadri-espositivi-bar">
+            <div class="blocco-valore-bar">
+                <span class="titolo-valore-bar">🧾 Importo Totale</span>
+                <span class="valore-cifra-bar v-totale" id="prezzoTotale">0$</span>
+            </div>
+            <div class="blocco-valore-bar">
+                <span class="titolo-valore-bar">💵 Quota Dip.</span>
+                <span class="valore-cifra-bar v-dipendente" id="lblQuotaDipendente">0$</span>
+            </div>
+            <div class="blocco-valore-bar">
+                <span class="titolo-valore-bar">🏛️ Quota Azienda</span>
+                <span class="valore-cifra-bar v-azienda" id="lblQuotaAzienda">0$</span>
+            </div>
+        </div>
+        
+        <div class="gruppo-pulsanti">
+            <button class="btn-discord btn-generico-lavoro" onclick="inviaLavoroUnificato()">🚀 Registra Lavoro</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    // 🛑 BLOCCO COMPLETO SELEZIONE, COPIA, MENU CONTESTUALE E ISPEZIONE
+    document.addEventListener('contextmenu', event => event.preventDefault()); 
+    document.addEventListener('keydown', function(e) {
+        if (e.ctrlKey && (e.key === 'c' || e.key === 'C' || e.key === 'x' || e.key === 'X' || e.key === 'u' || e.key === 'U')) {
+            e.preventDefault(); return false;
+        }
+        if (e.key === 'F12') { e.preventDefault(); return false; }
+    });
+
+    // 🔗 LINK WEBHOOK UNIFICATO
+    const WEBHOOK_UNIFICATO = "https://discord.com/api/webhooks/1507871053689393272/P6-cnOKIxoFH9olLRE8BV_quCnKJ5lp9qv3dbrn7T4GKT8yrtOMkNXQmK4J0GtlbnC1m";
+
+    let globalTotale = 0;
+    const checkboxes = document.querySelectorAll('.lista-checkbox');
+    const inputQuantita = document.getElementById('quantitaEstetica');
+
+    function vaiAComponentiEstetiche() {
+        const rigaCompleta = document.getElementById('sezione-componenti-estetiche');
+        if (rigaCompleta) {
+            rigaCompleta.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            inputQuantita.focus();
+        }
+    }
+
+    inputQuantita.addEventListener('input', function() {
+        this.value = this.value.replace(/[^0-9]/g, '');
+        let valoreCorrente = parseInt(this.value) || 0;
+        if (valoreCorrente > 50) this.value = 50;
+        aggiornaTotale();
+    });
+
+    // 🔄 CALCOLO AUTOMATICO DEL TOTALE E DELLE QUOTE IN TEMPO REALE
+    function aggiornaTotale() {
+        globalTotale = 0;
+        checkboxes.forEach(checkbox => {
+            const riga = checkbox.closest('li');
+            if (checkbox.checked) {
+                globalTotale += parseInt(checkbox.getAttribute('data-prezzo'));
+                riga.classList.add('riga-attiva');
+            } else { riga.classList.remove('riga-attiva'); }
+        });
+
+        const quantita = parseInt(inputQuantita.value) || 0;
+        globalTotale += (quantita * 1000);
+        
+        document.getElementById('prezzoTotale').textContent = globalTotale.toLocaleString('de-DE') + '$';
+
+        const selettoreGrado = document.getElementById('finGrado');
+        if(selettoreGrado.value && globalTotale > 0) {
+            const percentuale = parseFloat(selettoreGrado.value);
+            const quotaDipendente = Math.round(globalTotale * percentuale);
+            const quotaAzienda = globalTotale - quotaDipendente;
+
+            document.getElementById('lblQuotaDipendente').textContent = quotaDipendente.toLocaleString('de-DE') + '$';
+            document.getElementById('lblQuotaAzienda').textContent = quotaAzienda.toLocaleString('de-DE') + '$';
+        } else {
+            document.getElementById('lblQuotaDipendente').textContent = '0$';
+            document.getElementById('lblQuotaAzienda').textContent = '0$';
+        }
+    }
+    checkboxes.forEach(checkbox => checkbox.addEventListener('change', aggiornaTotale));
+
+    // 🔄 FUNZIONE DI RESET COMPLETO DEI CAMPI DELLA PAGINA
+    function resetFormGestionale() {
+        // Reset dei campi di configurazione iniziale
+        document.getElementById('finNomeIC').value = "";
+        document.getElementById('finDiscordID').value = "";
+        document.getElementById('finGrado').selectedIndex = 0;
+
+        // Reset dei componenti selezionati del listino e rimozione stile attivo
+        checkboxes.forEach(checkbox => {
+            checkbox.checked = false;
+            checkbox.closest('li').classList.remove('riga-attiva');
+        });
+
+        // Reset quantità componenti estetiche
+        inputQuantita.value = 0;
+
+        // Ricalcolo immediato per azzerare la barra strumenti in basso
+        aggiornaTotale();
+    }
+
+    // 🚀 INVIO DATI UNIFICATI CON UN SOLO CLICK
+    function inviaLavoroUnificato() {
+        const nomeIC = document.getElementById('finNomeIC').value.trim();
+        const idDiscord = document.getElementById('finDiscordID').value.trim().replace(/[^0-9]/g, '');
+        const selettoreGrado = document.getElementById('finGrado');
+
+        if (!nomeIC || !idDiscord || !selettoreGrado.value) {
+            alert("❌ Compila prima i tuoi dati in alto (Nome IC, ID Discord e Grado)!");
+            return;
+        }
+
+        let qualcosaSelezionato = false;
+        checkboxes.forEach(checkbox => { if(checkbox.checked) qualcosaSelezionato = true; });
+        if ((parseInt(inputQuantita.value) || 0) > 0) qualcosaSelezionato = true;
+
+        if (!qualcosaSelezionato || globalTotale <= 0) {
+            alert("❌ Seleziona dei componenti dal listino prima di procedere!");
+            return;
+        }
+
+        const percentuale = parseFloat(selettoreGrado.value);
+        const testoGrado = selettoreGrado.options[selettoreGrado.selectedIndex].text;
+        const quotaDipendente = Math.round(globalTotale * percentuale);
+        const quotaAzienda = globalTotale - quotaDipendente;
+        const tagEsterno = `<@${idDiscord}>`;
+
+        // Genera la lista delle modifiche per l'embed
+        let listaModificheSelezionate = "";
+        checkboxes.forEach(checkbox => {
+            if (checkbox.checked) {
+                listaModificheSelezionate += `• **${checkbox.getAttribute('data-nome')}** (${parseInt(checkbox.getAttribute('data-prezzo')).toLocaleString('de-DE')}$)\n`;
+            }
+        });
+        if ((parseInt(inputQuantita.value) || 0) > 0) {
+            listaModificheSelezionate += `• **Componenti Estetiche x${inputQuantita.value}** (${(inputQuantita.value*1000).toLocaleString('de-DE')}$)\n`;
+        }
+
+        // Payload configurato con titolo dell'embed aggiornato
+        const payloadUnificato = {
+            content: `💼 **Nuovo Resoconto Lavoro Inviato da:** ${tagEsterno}`,
+            embeds: [{
+                title: "🤖 [BENNY'S X ARTEMIS]",
+                color: 5814783, // Blu Discord classico
+                fields: [
+                    { name: "👤 Meccanico (IC)", value: nomeIC.toUpperCase(), inline: true },
+                    { name: "🆔 Discord Account", value: tagEsterno, inline: true },
+                    { name: "📋 Grado Aziendale", value: testoGrado, inline: false },
+                    { name: "⚙️ Modifiche Installate", value: listaModificheSelezionate || "Nessuna", inline: false },
+                    { name: "💰 Totale Fatturato", value: `**$ ${globalTotale.toLocaleString('de-DE')}**`, inline: false },
+                    { name: "💵 Quota Spettante Dipendente", value: `$ ${quotaDipendente.toLocaleString('de-DE')}`, inline: true },
+                    { name: "🏛️ Quota Trattenuta Azienda", value: `$ ${quotaAzienda.toLocaleString('de-DE')}`, inline: true }
+                ],
+                footer: { text: "Gestionale Unificato Benny's x Artemis • 2026" },
+                timestamp: new Date()
+            }]
+        };
+
+        fetch(WEBHOOK_UNIFICATO, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payloadUnificato)
+        })
+        .then(res => { 
+            if(res.ok) { 
+                alert("🚀 Resoconto intervento inviato correttamente a Discord!");
+                resetFormGestionale(); // Azzeramento totale della pagina dopo l'esito positivo
+            } else { 
+                alert("❌ Errore d'invio a Discord."); 
+            }
+        })
+        .catch(() => alert("❌ Errore di rete: server Discord irraggiungibili."));
+    }
+</script>
 
 </body>
 </html>
