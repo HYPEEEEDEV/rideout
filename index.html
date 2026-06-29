@@ -1036,13 +1036,13 @@
                 <select id="finGrado" onchange="aggiornaTotale()">
                     <option value="" disabled selected>Scegli il tuo grado...</option>
                     <option value="0.50">Direttore (50%)</option>
-                    <option value="0.35">Vice Direttore (35%)</option>
-                    <option value="0.25">Responsabile Officina (30%)</option>
-                    <option value="0.20">Supervisore (25%)</option>
-                    <option value="0.18">Meccanico Esperto (%20)</option>
-                    <option value="0.15">Meccanico (18%)</option>
-                    <option value="0.12">Meccanico in Prova (15%)</option>
-                    <option value="0.08">Apprendista (10%)</option>
+                    <option value="0.40">Vice Direttore (40%)</option>
+                    <option value="0.35">Responsabile Officina (35%)</option>
+                    <option value="0.30">Supervisore (30%)</option>
+                    <option value="0.25">Meccanico Esperto (%25)</option>
+                    <option value="0.15">Meccanico (20%)</option>
+                    <option value="0.15">Meccanico in Prova (15%)</option>
+                    <option value="0.10">Apprendista (10%)</option>
                 </select>
             </div>
         </div>
@@ -1055,17 +1055,17 @@
             <ul class="lista-interventi">
                 <li>
                     <div class="intervento-info">
-                        <input type="checkbox" id="chkRiparazione" class="lista-checkbox cb-meccanico" data-prezzo="2000" data-nome="Riparazioni Meccaniche" onchange="gestioneCheck(this)">
+                        <input type="checkbox" id="chkRiparazione" class="lista-checkbox cb-meccanico" data-prezzo="3000" data-nome="Riparazioni Meccaniche" onchange="gestioneCheck(this)">
                         <span class="intervento-nome">Riparazioni Meccaniche &#x1F527;</span>
                     </div>
-                    <span class="intervento-prezzo">2.000$</span>
+                    <span class="intervento-prezzo">3.000$</span>
                 </li>
                 <li>
                     <div class="intervento-info">
-                        <input type="checkbox" id="chkLavaggio" class="lista-checkbox cb-meccanico" data-prezzo="1000" data-nome="Pulizia Dettagliata" onchange="gestioneCheck(this)">
+                        <input type="checkbox" id="chkLavaggio" class="lista-checkbox cb-meccanico" data-prezzo="2000" data-nome="Pulizia Dettagliata" onchange="gestioneCheck(this)">
                         <span class="intervento-nome">Pulizia Dettagliata &#x1F9FC;</span>
                     </div>
-                    <span class="intervento-prezzo">1.000$</span>
+                    <span class="intervento-prezzo">2.000$</span>
                 </li>
             </ul>
             <div class="subtotale-box" id="subRipristino">Subtotale Ripristino: 0$</div>
@@ -1076,17 +1076,17 @@
             <ul class="lista-interventi">
                 <li>
                     <div class="intervento-info">
-                        <input type="number" class="input-quantita" id="qtaKitRiparazioni" min="0" value="0" data-prezzo-unitario="4000" data-nome="Kit Riparazioni" oninput="aggiornaTotale()">
+                        <input type="number" class="input-quantita" id="qtaKitRiparazioni" min="0" value="0" data-prezzo-unitario="5000" data-nome="Kit Riparazioni" oninput="aggiornaTotale()">
                         <span class="intervento-nome">Kit Riparazioni &#x1F527;</span>
                     </div>
-                    <span class="intervento-prezzo">4.000$ <span style="font-size:12px; color:#aaa; font-weight:normal;">A PEZZO</span></span>
+                    <span class="intervento-prezzo">5.000$ <span style="font-size:12px; color:#aaa; font-weight:normal;">A PEZZO</span></span>
                 </li>
                 <li>
                     <div class="intervento-info">
-                        <input type="number" class="input-quantita" id="qtaKitPulizia" min="0" value="0" data-prezzo-unitario="2000" data-nome="Kit pulizia" oninput="aggiornaTotale()">
+                        <input type="number" class="input-quantita" id="qtaKitPulizia" min="0" value="0" data-prezzo-unitario="3000" data-nome="Kit pulizia" oninput="aggiornaTotale()">
                         <span class="intervento-nome">Kit pulizia &#x1F9FC;</span>
                     </div>
-                    <span class="intervento-prezzo">2.000$ <span style="font-size:12px; color:#aaa; font-weight:normal;">A PEZZO</span></span>
+                    <span class="intervento-prezzo">3.000$ <span style="font-size:12px; color:#aaa; font-weight:normal;">A PEZZO</span></span>
                  </li>
             </ul>
             <div class="subtotale-box" id="subKitRipristino">Subtotale Kit Ripristino: 0$</div>
@@ -1097,24 +1097,24 @@
             <ul class="lista-interventi">
                 <li>
                     <div class="intervento-info">
-                        <input type="checkbox" id="chkVerniciatura" class="lista-checkbox" data-prezzo="1500" data-nome="Verniciatura Completa" onchange="gestioneCheck(this)">
+                        <input type="checkbox" id="chkVerniciatura" class="lista-checkbox" data-prezzo="2500" data-nome="Verniciatura Completa" onchange="gestioneCheck(this)">
                         <span class="intervento-nome">Verniciatura Completa &#x1F3A8;</span>
                     </div>
-                    <span class="intervento-prezzo">1.500$</span>
+                    <span class="intervento-prezzo">2.500$</span>
                 </li>
                 <li id="sezione-componenti-estetiche">
                     <div class="intervento-info">
-                        <input type="number" class="input-quantita" id="quantitaEstetica" min="0" value="0" data-prezzo-unitario="1000" data-nome="Componenti Estetiche" oninput="aggiornaTotale()">
+                        <input type="number" class="input-quantita" id="quantitaEstetica" min="0" value="0" data-prezzo-unitario="2000" data-nome="Componenti Estetiche" oninput="aggiornaTotale()">
                         <span class="intervento-nome">Componenti Estetiche (Neon, Cerchi, Spoiler, ecc.) &#x2699;&#xFE0F;</span>
                     </div>
-                    <span class="intervento-prezzo">1.000$ <span style="font-size:12px; color:#aaa; font-weight:normal;">A PEZZO</span></span>
+                    <span class="intervento-prezzo">2.000$ <span style="font-size:12px; color:#aaa; font-weight:normal;">A PEZZO</span></span>
                 </li>
                 <li>
                     <div class="intervento-info">
-                        <input type="checkbox" id="chkLivrea" class="lista-checkbox" data-prezzo="3500" data-nome="Applicazione Livrea" onchange="gestioneCheck(this)">
+                        <input type="checkbox" id="chkLivrea" class="lista-checkbox" data-prezzo="4000" data-nome="Applicazione Livrea" onchange="gestioneCheck(this)">
                         <span class="intervento-nome">Applicazione Livrea &#x1F3CE;&#xFE0F;&#x2728;</span>
                     </div>
-                    <span class="intervento-prezzo">3.500$</span>
+                    <span class="intervento-prezzo">4.000$</span>
                 </li>
             </ul>
             <div class="subtotale-box" id="subEstetica">Subtotale Estetica: 0$</div>
@@ -1155,14 +1155,14 @@
             <ul class="lista-interventi">
                 <li>
                     <div class="intervento-info">
-                        <input type="checkbox" id="chkFullKit" class="lista-checkbox" data-prezzo="18000" data-nome="Full Kit Meccanica" onchange="gestioneFullKit(this)">
+                        <input type="checkbox" id="chkFullKit" class="lista-checkbox" data-prezzo="20000" data-nome="Full Kit Meccanica" onchange="gestioneFullKit(this)">
                         <div>
                             <span class="intervento-nome" style="display: block;">Full Kit Meccanica &#x1F4E6;&#x1F451;</span>
-                            <span style="font-size: 12px; color: #aaaaaa; display: block;">(Meccanica fissa al massimo livello: 18.000$)</span>
+                            <span style="font-size: 12px; color: #aaaaaa; display: block;">(Meccanica fissa al massimo livello: 20.000$)</span>
                             <span style="font-size: 12px; color: #e74c3c; font-weight: bold; display: block; margin-top: 3px;">&#x26A0;&#xFE0F; INFORMAZIONE: L'attivazione applicherà il prezzo flat e bloccherà le singole voci sotto.</span>
                         </div>
                     </div>
-                    <span class="intervento-prezzo">18.000$</span>
+                    <span class="intervento-prezzo">20.000$</span>
                 </li>
                 <li>
                     <div class="intervento-info" style="padding-left: 37px;">
@@ -1181,50 +1181,50 @@
         <div class="blocco-meccanico-vincolato">
             <div class="categoria-titolo">&#x1F680; [4] Elaborazione Prestazioni (Motore &amp; Turbo)</div>
             <ul class="lista-interventi">
-                <li><div class="intervento-info"><input type="checkbox" class="lista-checkbox cb-meccanico" data-prezzo="1000" data-nome="Modifica Turbo" onchange="gestioneCheck(this)"><span>Modifica Turbo &#x1F3CE;&#xFE0F;&#x1F4A8;</span></div><span class="intervento-prezzo">1.000$</span></li>
+                <li><div class="intervento-info"><input type="checkbox" class="lista-checkbox cb-meccanico" data-prezzo="2000" data-nome="Modifica Turbo" onchange="gestioneCheck(this)"><span>Modifica Turbo &#x1F3CE;&#xFE0F;&#x1F4A8;</span></div><span class="intervento-prezzo">1.000$</span></li>
 <li>
 ================================= Ride Out =================================
-                <li><div class="intervento-info"><input type="checkbox" class="lista-checkbox cb-meccanico" data-prezzo="1400" data-nome="Upgrade Motore Lvl 1" onchange="gestioneCheck(this)"><span>Upgrade Motore LV 1 &#x1F680;</span></div><span class="intervento-prezzo">1.400$</span></li>
-                <li><div class="intervento-info"><input type="checkbox" class="lista-checkbox cb-meccanico" data-prezzo="1800" data-nome="Upgrade Motore Lvl 2" onchange="gestioneCheck(this)"><span>Upgrade Motore LV 2 &#x1F680;&#x1F525;</span></div><span class="intervento-prezzo">1.800$</span></li>
-                <li><div class="intervento-info"><input type="checkbox" class="lista-checkbox cb-meccanico" data-prezzo="2570" data-nome="Upgrade Motore Lvl 3" onchange="gestioneCheck(this)"><span>Upgrade Motore LV 3 &#x1F680;&#x26A1;</span></div><span class="intervento-prezzo">2.570$</span></li>
-                <li><div class="intervento-info"><input type="checkbox" class="lista-checkbox cb-meccanico" data-prezzo="4400" data-nome="Upgrade Motore Lvl 4" onchange="gestioneCheck(this)"><span>Upgrade Motore LV 4 &#x1F680;&#x1F451;</span></div><span class="intervento-prezzo">4.400$</span></li>
+                <li><div class="intervento-info"><input type="checkbox" class="lista-checkbox cb-meccanico" data-prezzo="2000" data-nome="Upgrade Motore Lvl 1" onchange="gestioneCheck(this)"><span>Upgrade Motore LV 1 &#x1F680;</span></div><span class="intervento-prezzo">1.400$</span></li>
+                <li><div class="intervento-info"><input type="checkbox" class="lista-checkbox cb-meccanico" data-prezzo="2500" data-nome="Upgrade Motore Lvl 2" onchange="gestioneCheck(this)"><span>Upgrade Motore LV 2 &#x1F680;&#x1F525;</span></div><span class="intervento-prezzo">1.800$</span></li>
+                <li><div class="intervento-info"><input type="checkbox" class="lista-checkbox cb-meccanico" data-prezzo="4500" data-nome="Upgrade Motore Lvl 3" onchange="gestioneCheck(this)"><span>Upgrade Motore LV 3 &#x1F680;&#x26A1;</span></div><span class="intervento-prezzo">2.570$</span></li>
+                <li><div class="intervento-info"><input type="checkbox" class="lista-checkbox cb-meccanico" data-prezzo="6500" data-nome="Upgrade Motore Lvl 4" onchange="gestioneCheck(this)"><span>Upgrade Motore LV 4 &#x1F680;&#x1F451;</span></div><span class="intervento-prezzo">4.400$</span></li>
             </ul>
             <div class="subtotale-box" id="subPotenza">Subtotale Potenza: 0$</div>
 
             <div class="categoria-titolo">&#x1F6D1; [5] Sicurezza e Controllo (Freni)</div>
             <ul class="lista-interventi">
-                <li><div class="intervento-info"><input type="checkbox" class="lista-checkbox cb-meccanico" data-prezzo="1200" data-nome="Upgrade Freni Lvl 1" onchange="gestioneCheck(this)"><span>Upgrade Freni LV 1 &#x1F6D1;</span></div><span class="intervento-prezzo">1.200$</span></li>
-                <li><div class="intervento-info"><input type="checkbox" class="lista-checkbox cb-meccanico" data-prezzo="1300" data-nome="Upgrade Freni Lvl 2" onchange="gestioneCheck(this)"><span>Upgrade Freni LV 2 &#x1F6D1;&#x1F525;</span></div><span class="intervento-prezzo">1.300$</span></li>
-                <li><div class="intervento-info"><input type="checkbox" class="lista-checkbox cb-meccanico" data-prezzo="1400" data-nome="Upgrade Freni Lvl 3" onchange="gestioneCheck(this)"><span>Upgrade Freni LV 3 &#x1F6D1;&#x26A1;</span></div><span class="intervento-prezzo">1.400$</span></li>
-                <li><div class="intervento-info"><input type="checkbox" class="lista-checkbox cb-meccanico" data-prezzo="1600" data-nome="Upgrade Freni Lvl 4" onchange="gestioneCheck(this)"><span>Upgrade Freni LV 4 &#x1F6D1;&#x1F451;</span></div><span class="intervento-prezzo">1.600$</span></li>
+                <li><div class="intervento-info"><input type="checkbox" class="lista-checkbox cb-meccanico" data-prezzo="2000" data-nome="Upgrade Freni Lvl 1" onchange="gestioneCheck(this)"><span>Upgrade Freni LV 1 &#x1F6D1;</span></div><span class="intervento-prezzo">1.200$</span></li>
+                <li><div class="intervento-info"><input type="checkbox" class="lista-checkbox cb-meccanico" data-prezzo="2500" data-nome="Upgrade Freni Lvl 2" onchange="gestioneCheck(this)"><span>Upgrade Freni LV 2 &#x1F6D1;&#x1F525;</span></div><span class="intervento-prezzo">1.300$</span></li>
+                <li><div class="intervento-info"><input type="checkbox" class="lista-checkbox cb-meccanico" data-prezzo="3000" data-nome="Upgrade Freni Lvl 3" onchange="gestioneCheck(this)"><span>Upgrade Freni LV 3 &#x1F6D1;&#x26A1;</span></div><span class="intervento-prezzo">1.400$</span></li>
+                <li><div class="intervento-info"><input type="checkbox" class="lista-checkbox cb-meccanico" data-prezzo="3500" data-nome="Upgrade Freni Lvl 4" onchange="gestioneCheck(this)"><span>Upgrade Freni LV 4 &#x1F6D1;&#x1F451;</span></div><span class="intervento-prezzo">1.600$</span></li>
             </ul>
             <div class="subtotale-box" id="subFreni">Subtotale Freni: 0$</div>
 
             <div class="categoria-titolo">&#x2699;&#xFE0F; [6] Trasmissioni</div>
             <ul class="lista-interventi"<li>
-                <li><div class="intervento-info"><input type="checkbox" class="lista-checkbox cb-meccanico" data-prezzo="1400" data-nome="Upgrade Trasmissione Lvl 1" onchange="gestioneCheck(this)"><span>Upgrade Trasmissione LV 1 &#x2699;&#xFE0F;&#x1F525;</span></div><span class="intervento-prezzo">1.400$</span>
-                <li><div class="intervento-info"><input type="checkbox" class="lista-checkbox cb-meccanico" data-prezzo="1550" data-nome="Upgrade Trasmissione Lvl 2" onchange="gestioneCheck(this)"><span>Upgrade Trasmissione LV 2 &#x2699;&#xFE0F;&#x1F525;</span></div><span class="intervento-prezzo">1.550$</span></li>
-                <li><div class="intervento-info"><input type="checkbox" class="lista-checkbox cb-meccanico" data-prezzo="2000" data-nome="Upgrade Trasmissione Lvl 3" onchange="gestioneCheck(this)"><span>Upgrade Trasmissione LV 3 &#x2699;&#xFE0F;&#x26A1;</span></div><span class="intervento-prezzo">2.000$</span></li>
-                <li><div class="intervento-info"><input type="checkbox" class="lista-checkbox cb-meccanico" data-prezzo="2200" data-nome="Upgrade Trasmissione Lvl 4" onchange="gestioneCheck(this)"><span>Upgrade Trasmissione LV 4 &#x2699;&#xFE0F;&#x1F451;</span></div><span class="intervento-prezzo">2.200$</span></li>
+                <li><div class="intervento-info"><input type="checkbox" class="lista-checkbox cb-meccanico" data-prezzo="2000" data-nome="Upgrade Trasmissione Lvl 1" onchange="gestioneCheck(this)"><span>Upgrade Trasmissione LV 1 &#x2699;&#xFE0F;&#x1F525;</span></div><span class="intervento-prezzo">1.400$</span>
+                <li><div class="intervento-info"><input type="checkbox" class="lista-checkbox cb-meccanico" data-prezzo="2500" data-nome="Upgrade Trasmissione Lvl 2" onchange="gestioneCheck(this)"><span>Upgrade Trasmissione LV 2 &#x2699;&#xFE0F;&#x1F525;</span></div><span class="intervento-prezzo">1.550$</span></li>
+                <li><div class="intervento-info"><input type="checkbox" class="lista-checkbox cb-meccanico" data-prezzo="3000" data-nome="Upgrade Trasmissione Lvl 3" onchange="gestioneCheck(this)"><span>Upgrade Trasmissione LV 3 &#x2699;&#xFE0F;&#x26A1;</span></div><span class="intervento-prezzo">2.000$</span></li>
+                <li><div class="intervento-info"><input type="checkbox" class="lista-checkbox cb-meccanico" data-prezzo="3500" data-nome="Upgrade Trasmissione Lvl 4" onchange="gestioneCheck(this)"><span>Upgrade Trasmissione LV 4 &#x2699;&#xFE0F;&#x1F451;</span></div><span class="intervento-prezzo">2.200$</span></li>
             </ul>
             <div class="subtotale-box" id="subTrasmissioni">Subtotale Trasmissioni: 0$</div>
 
             <div class="categoria-titolo">&#x1F6D1; [7] Sicurezza e Controllo (Sospensioni)</div>
             <ul class="lista-interventi">
-                <li><div class="intervento-info"><input type="checkbox" class="lista-checkbox cb-meccanico" data-prezzo="1100" data-nome="Upgrade Sospensioni Lvl 1" onchange="gestioneCheck(this)"><span>Upgrade Sospensioni LV 1 &#x1F6D1;</span></div><span class="intervento-prezzo">1.100$</span></li>
-                <li><div class="intervento-info"><input type="checkbox" class="lista-checkbox cb-meccanico" data-prezzo="1300" data-nome="Upgrade Sospensioni Lvl 2" onchange="gestioneCheck(this)"><span>Upgrade Sospensioni LV 2 &#x1F6D1;&#x1F525;</span></div><span class="intervento-prezzo">1.300$</span></li>
-                <li><div class="intervento-info"><input type="checkbox" class="lista-checkbox cb-meccanico" data-prezzo="1550" data-nome="Upgrade Sospensioni Lvl 3" onchange="gestioneCheck(this)"><span>Upgrade Sospensioni LV 3 &#x1F6D1;&#x26A1;</span></div><span class="intervento-prezzo">1.550$</span></li>
-                <li><div class="intervento-info"><input type="checkbox" class="lista-checkbox cb-meccanico" data-prezzo="1900" data-nome="Upgrade Sospensioni Lvl 4" onchange="gestioneCheck(this)"><span>Upgrade Sospensioni LV 4 &#x1F6D1;&#x1F451;</span></div><span class="intervento-prezzo">1.900$</span></li>
+                <li><div class="intervento-info"><input type="checkbox" class="lista-checkbox cb-meccanico" data-prezzo="2000" data-nome="Upgrade Sospensioni Lvl 1" onchange="gestioneCheck(this)"><span>Upgrade Sospensioni LV 1 &#x1F6D1;</span></div><span class="intervento-prezzo">1.100$</span></li>
+                <li><div class="intervento-info"><input type="checkbox" class="lista-checkbox cb-meccanico" data-prezzo="2500" data-nome="Upgrade Sospensioni Lvl 2" onchange="gestioneCheck(this)"><span>Upgrade Sospensioni LV 2 &#x1F6D1;&#x1F525;</span></div><span class="intervento-prezzo">1.300$</span></li>
+                <li><div class="intervento-info"><input type="checkbox" class="lista-checkbox cb-meccanico" data-prezzo="3000" data-nome="Upgrade Sospensioni Lvl 3" onchange="gestioneCheck(this)"><span>Upgrade Sospensioni LV 3 &#x1F6D1;&#x26A1;</span></div><span class="intervento-prezzo">1.550$</span></li>
+                <li><div class="intervento-info"><input type="checkbox" class="lista-checkbox cb-meccanico" data-prezzo="3500" data-nome="Upgrade Sospensioni Lvl 4" onchange="gestioneCheck(this)"><span>Upgrade Sospensioni LV 4 &#x1F6D1;&#x1F451;</span></div><span class="intervento-prezzo">1.900$</span></li>
             </ul>
             <div class="subtotale-box" id="subSospensioni">Subtotale Sospensioni: 0$</div>
 
             <div class="categoria-titolo">&#x1F6E1;&#xFE0F; [8] Corazze (Blindatura)</div>
             <ul class="lista-interventi">
-                <li><div class="intervento-info"><input type="checkbox" class="lista-checkbox cb-meccanico" data-prezzo="2000" data-nome="Upgrade Corazza Lvl 1" onchange="gestioneCheck(this)"><span>Upgrade Corazza LV 1 &#x1F6E1;&#xFE0F;</span></div><span class="intervento-prezzo">2.000$</span></li>
-                <li><div class="intervento-info"><input type="checkbox" class="lista-checkbox cb-meccanico" data-prezzo="3000" data-nome="Upgrade Corazza Lvl 2" onchange="gestioneCheck(this)"><span>Upgrade Corazza LV 2 &#x1F6E1;&#xFE0F;&#x1F525;</span></div><span class="intervento-prezzo">3.000$</span></li>
-                <li><div class="intervento-info"><input type="checkbox" class="lista-checkbox cb-meccanico" data-prezzo="3500" data-nome="Upgrade Corazza Lvl 3" onchange="gestioneCheck(this)"><span>Upgrade Corazza LV 3 &#x1F6E1;&#xFE0F;&#x26A1;</span></div><span class="intervento-prezzo">3.500$</span></li>
-                <li><div class="intervento-info"><input type="checkbox" class="lista-checkbox cb-meccanico" data-prezzo="4100" data-nome="Upgrade Corazza Lvl 4" onchange="gestioneCheck(this)"><span>Upgrade Corazza LV 4 &#x1F6E1;&#xFE0F;&#x1F451;</span></div><span class="intervento-prezzo">4.100$</span></li>
-                <li><div class="intervento-info"><input type="checkbox" class="lista-checkbox cb-meccanico" data-prezzo="4500" data-nome="Upgrade Corazza Lvl 5" onchange="gestioneCheck(this)"><span>Upgrade Corazza LV 5 &#x1F6E1;&#xFE0F;&#x1F48E;</span></div><span class="intervento-prezzo">4.500$</span></li>
+                <li><div class="intervento-info"><input type="checkbox" class="lista-checkbox cb-meccanico" data-prezzo="4000" data-nome="Upgrade Corazza Lvl 1" onchange="gestioneCheck(this)"><span>Upgrade Corazza LV 1 &#x1F6E1;&#xFE0F;</span></div><span class="intervento-prezzo">2.000$</span></li>
+                <li><div class="intervento-info"><input type="checkbox" class="lista-checkbox cb-meccanico" data-prezzo="5000" data-nome="Upgrade Corazza Lvl 2" onchange="gestioneCheck(this)"><span>Upgrade Corazza LV 2 &#x1F6E1;&#xFE0F;&#x1F525;</span></div><span class="intervento-prezzo">3.000$</span></li>
+                <li><div class="intervento-info"><input type="checkbox" class="lista-checkbox cb-meccanico" data-prezzo="6000" data-nome="Upgrade Corazza Lvl 3" onchange="gestioneCheck(this)"><span>Upgrade Corazza LV 3 &#x1F6E1;&#xFE0F;&#x26A1;</span></div><span class="intervento-prezzo">3.500$</span></li>
+                <li><div class="intervento-info"><input type="checkbox" class="lista-checkbox cb-meccanico" data-prezzo="7000" data-nome="Upgrade Corazza Lvl 4" onchange="gestioneCheck(this)"><span>Upgrade Corazza LV 4 &#x1F6E1;&#xFE0F;&#x1F451;</span></div><span class="intervento-prezzo">4.100$</span></li>
+                <li><div class="intervento-info"><input type="checkbox" class="lista-checkbox cb-meccanico" data-prezzo="8000" data-nome="Upgrade Corazza Lvl 5" onchange="gestioneCheck(this)"><span>Upgrade Corazza LV 5 &#x1F6E1;&#xFE0F;&#x1F48E;</span></div><span class="intervento-prezzo">4.500$</span></li>
             </ul>
             <div class="subtotale-box" id="subCorazze">Subtotale Corazze: 0$</div>
         </div>
