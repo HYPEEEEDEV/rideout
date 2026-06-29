@@ -1485,8 +1485,35 @@
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ embeds: [embed] })
             });
-            if (res.ok) {
+           if (res.ok) {
                 alert("✅ Fattura inviata su Discord con successo!\nMeccanico: " + nome + "\nImporto Totale: " + totale);
+                
+                // === RESET SELETTIVO DELLA PAGINA ===
+                
+                // 1. Reset manuale del campo cliente
+                if (document.getElementById('cliente')) {
+                    document.getElementById('cliente').value = '';
+                }
+                
+                // 2. Deselezione di tutte le checkbox e i radio button dei lavori/modifiche
+                const modificheCheckboxes = document.querySelectorAll('input[type="checkbox"], input[type="radio"]');
+                modificheCheckboxes.forEach(cb => cb.checked = false);
+                
+                // 3. Svuotamento di eventuali campi addizionali di testo per le modifiche o i prezzi manuali
+                if (document.getElementById('modifiche')) {
+                    document.getElementById('modifiche').value = '';
+                }
+                if (document.getElementById('prezzoManuale')) {
+                    document.getElementById('prezzoManuale').value = '';
+                }
+
+                // 4. Ricalcolo immediato dei totali grafici per azzerare i contatori a schermo
+                if (typeof calcolaTotale === "function") {
+                    calcolaTotale();
+                } else if (typeof calcolaTotaleModifiche === "function") {
+                    calcolaTotaleModifiche();
+                }
+                
             } else {
                 let errTxt = await res.text();
                 alert("❌ Errore nell'invio a Discord!\nCodice: " + res.status + "\n" + errTxt);
